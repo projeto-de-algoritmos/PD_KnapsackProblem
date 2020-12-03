@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Problema da mochila</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="app/knapsack.js"></script>
+</head>
+
+<body>
+	<h3>Mochila</h3>
+	<img src="assets/mochila.png">
+	<div>Capacidade máxima de mochila (em KG)</div>
+	<input id="mochila" type="number" placeholder="10" />
+	<br />
+	<br />
+	<br />
+	<h3>Caixa eletrônico</h3>
+	<img src="assets/money.png">
+	<div>Peso do malote (em KG)</div>
+	<input id="peso" type="number" placeholder="5" />
+	<div>Valor do malote (em reais)</div>
+	<input id="valor" type="number" placeholder="5000" />
+	<div>
+		<button onClick="adicionarBanco();">Adicionar caixa eletrônico</button>
+	</div>
+	<div>
+		<button onClick="finalizar();">Finalizar</button>
+	</div>
+	<h2>Caixas Eletrônicos</div>
+	<div id="bancos"></div>
+	<div id="resultado"></div>
+</body>
+
+</html>

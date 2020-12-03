@@ -1,3 +1,19 @@
+let count = 1;
+
+class Bank {
+	id = ""
+	peso = 0
+	valor = 0
+
+	constructor(id, peso, valor) {
+		this.id = id;
+		this.peso = peso;
+		this.valor = valor;
+	}
+}
+
+let banks = [];
+
 const knapsack = (items, W) => {
 	let item = 0;
 	let weight = 0;
@@ -49,9 +65,64 @@ const knapsack = (items, W) => {
 		}
 	}
 
-	console.log("Max Benefit: ", matrix_weight[number_of_items][W]);
-	console.log("Max Benefit From: ", solution_array)
+	mostrarResultado(matrix_weight, number_of_items, W, solution_array);
 }
 
-// Call Function with 4 items and W=6
-knapsack([{ w: 1, b: 2 }, { w: 3, b: 4 }, { w: 2, b: 3 }, { w: 4, b: 11 }], 6);
+function mostrarResultado(matrix_weight, number_of_items, W, solution_array) {
+	const resultado = document.getElementById("resultado");
+
+	const h6 = document.createElement("h6");
+	const bank = document.createTextNode(`O máximo de dinheiro que conseguira levar considerando os caixas disponíveis é ${ matrix_weight[number_of_items][W] }`);
+	h6.appendChild(bank);
+
+	const hloco = document.createElement("h6");
+	const ban = document.createTextNode(`Você deverá levar malotes dos seguintes caixas eletrônicos: ${ banks.filter(item => solution_array.find(i => i.w === item.peso)).map(item => item.id).join(', ') }`);
+	hloco.appendChild(ban);
+
+	resultado.appendChild(h6);
+	resultado.appendChild(hloco);
+}
+
+function adicionarBanco() {
+	const peso = document.getElementById("peso").value;
+	const valor = document.getElementById("valor").value;
+
+	if (!peso.length || !valor.length) {
+		alert("Você deve preencher o peso e o valor do malote!!");
+		return;
+	}
+
+	if (banks.find(bank => bank.peso === peso)) {
+		alert("Já existe um caixa eletrônico com malotes deste peso!!");
+		return;
+	}
+
+	banks.push(new Bank(`Caixa Eletrônico ${ count }`, parseInt(peso), parseInt(valor)));
+
+	const bancos = document.getElementById("bancos");
+
+	const h6 = document.createElement("h6");
+	const bank = document.createTextNode(`Caixa eletrônico ${ count }\nPeso do malote: ${ peso }\nValor do malote: ${ valor }`);
+	h6.appendChild(bank);
+	count++;
+
+	bancos.appendChild(h6);
+
+	document.getElementById("peso").value = "";
+	document.getElementById("valor").value = "";
+}
+
+function finalizar() {
+	if (!banks.length) {
+		alert("Você deve adicionar no mínimo 1 banco!!");
+		return;
+	}
+
+	const mochila = document.getElementById("mochila").value;
+	if (!mochila.length) {
+		alert("Você deve adicionar um peso para sua mochila!!");
+		return;
+	}
+
+	knapsack(banks.map(item => ({ id: item.id, w: item.peso, b: item.valor })), parseInt(mochila));
+}
