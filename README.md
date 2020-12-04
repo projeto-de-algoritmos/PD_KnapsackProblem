@@ -10,10 +10,14 @@
 | 16/0026822  |  Djorkaeff Alexandre Vilela Pereira |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Este projeto tem como objetivo mostrar uma aplicação do Problema da Mochila. No projeto é possível cadastrar a capacidade da mochila a ser utilizada no ato e listar todos os caixas eletrônicos e o dinheiro presente nele. Com base nisso o algoritmo falará qual o máximo de  dinheiro que será possível carregar.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![img1](https://i.imgur.com/SLpnp8l.png)
+![img2](https://i.imgur.com/8hWuzz4.png)
+![img3](https://i.imgur.com/HznmcHy.png)
+
+
 
 ## Instalação 
 **Linguagem**: HTML/CSS/JavaScript<br>
