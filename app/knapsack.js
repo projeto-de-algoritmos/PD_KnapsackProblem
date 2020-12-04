@@ -72,7 +72,7 @@ function mostrarResultado(matrix_weight, number_of_items, W, solution_array) {
 	const resultado = document.getElementById("resultado");
 
 	const h6 = document.createElement("h6");
-	const bank = document.createTextNode(`O máximo de dinheiro que conseguira levar considerando os caixas disponíveis é ${ matrix_weight[number_of_items][W] }`);
+	const bank = document.createTextNode(`O máximo de dinheiro que conseguirá levar considerando os caixas disponíveis é ${ matrix_weight[number_of_items][W] }`);
 	h6.appendChild(bank);
 
 	const hloco = document.createElement("h6");
@@ -102,7 +102,7 @@ function adicionarBanco() {
 	const bancos = document.getElementById("bancos");
 
 	const h6 = document.createElement("h6");
-	const bank = document.createTextNode(`Caixa eletrônico ${ count }\nPeso do malote: ${ peso }\nValor do malote: ${ valor }`);
+	const bank = document.createTextNode(`Caixa eletrônico ${ count } \t Peso do malote: ${ peso }\tValor do malote: ${ valor }`);
 	h6.appendChild(bank);
 	count++;
 
@@ -125,4 +125,11 @@ function finalizar() {
 	}
 
 	knapsack(banks.map(item => ({ id: item.id, w: item.peso, b: item.valor })), parseInt(mochila));
+}
+
+function mostrarCorpo() {
+	const data = document.getElementById("data");
+	const description = document.getElementById("description");
+	data.style.display = "block";
+	description.style.display = "none";
 }

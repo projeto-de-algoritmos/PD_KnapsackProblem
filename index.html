@@ -8,29 +8,36 @@
 	<script src="app/knapsack.js"></script>
 </head>
 
-<body>
-	<h3>Mochila</h3>
-	<img src="assets/mochila.png">
-	<div>Capacidade máxima de mochila (em KG)</div>
-	<input id="mochila" type="number" placeholder="10" />
-	<br />
-	<br />
-	<br />
-	<h3>Caixa eletrônico</h3>
-	<img src="assets/money.png">
-	<div>Peso do malote (em KG)</div>
-	<input id="peso" type="number" placeholder="5" />
-	<div>Valor do malote (em reais)</div>
-	<input id="valor" type="number" placeholder="5000" />
-	<div>
-		<button onClick="adicionarBanco();">Adicionar caixa eletrônico</button>
+<body id="body">
+	<div id="description">
+		<h2>GTA BR</h2>
+		<p>Deseja descobrir quanto de dinheiro de caixa eletrônico você consegue carregar? Clique no botão abaixo e vamos lá!</p>
+		<button onclick="mostrarCorpo()">Iniciar</button>
 	</div>
-	<div>
-		<button onClick="finalizar();">Finalizar</button>
+	<div id="data">
+		<h3>Mochila</h3>
+		<img src="assets/mochila.png">
+		<div>Capacidade máxima de mochila (em KG)</div>
+		<input id="mochila" type="number" placeholder="10" />
+		<br />
+		<br />
+		<br />
+		<h3>Caixa eletrônico</h3>
+		<img src="assets/money.png">
+		<div>Peso do malote (em KG)</div>
+		<input id="peso" type="number" placeholder="5" />
+		<div>Valor do malote (em reais)</div>
+		<input id="valor" type="number" placeholder="5000" />
+		<div>
+			<button onClick="adicionarBanco();">Adicionar caixa eletrônico</button>
+		</div>
+		<div>
+			<button onClick="finalizar();">Finalizar</button>
+		</div>
+		<h2>Caixas Eletrônicos</div>
+		<div id="bancos"></div>
+		<div id="resultado"></div>
 	</div>
-	<h2>Caixas Eletrônicos</div>
-	<div id="bancos"></div>
-	<div id="resultado"></div>
 </body>
 
 </html>

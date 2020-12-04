@@ -9,3 +9,15 @@ button {
 input {
   width: 200px;
 }
+
+body {
+  text-align: center;
+}
+
+#description {
+  display: block;
+}
+
+#data {
+  display: none;
+}
