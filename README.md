@@ -13,7 +13,7 @@
 Este projeto tem como objetivo mostrar uma aplicação do Problema da Mochila. No projeto é possível cadastrar a capacidade da mochila a ser utilizada no ato e listar todos os caixas eletrônicos e o dinheiro presente nele. Com base nisso o algoritmo falará qual o máximo de  dinheiro que será possível carregar.
 
 ## Screenshots
-![img1](https://i.imgur.com/SLpnp8l.png)
+![img1](https://i.imgur.com/u5aC699.png)
 ![img2](https://i.imgur.com/8hWuzz4.png)
 ![img3](https://i.imgur.com/HznmcHy.png)
 
@@ -25,4 +25,4 @@ Este projeto tem como objetivo mostrar uma aplicação do Problema da Mochila. N
 Você só precisará de um browser com Javascript habilitado. Para executar o projeto basta abrir o arquivo index.html em qualquer navegador.
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Clique no botão escrito "iniciar", em seguida, digite a capacidade máxima da mochila em KG. Após digitar a capacidade da mochila, digite o peso de cada malote (em KG) e o valor do malote (em Reais) e clique em "Adicionar caixa eletrônico". Após finalizar todas as inserções, clique em finalizar e veja o resultado. 
